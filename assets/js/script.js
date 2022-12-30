@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function(){
             if (this.getAttribute("data-type") === "new") {
                 newDeal();
-                countTurn();
+               
             } else if (this.getAttribute("data-type") === "hold") {
                 hold();
-                countTurn();
+              
             }
             else if (this.getAttribute("data-type") === "hit") {
                 hitMe();
-                countTurn();
+             
             }
             else if (this.getAttribute("data-type") === "fold") {
                 fold();
@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
  * Fold
  */
 function fold(){
-    document.getElementById("count").innerText = 0;
+    document.getElementById("count").value = 0;
+    let value = document.getElementById("count").value;
     document.getElementById('dealer-image-1').src = "assets/images/empty.png"
     document.getElementById('dealer-image-2').src = "assets/images/empty.png"
     document.getElementById('dealer-image-3').src = "assets/images/empty.png"
@@ -41,6 +42,7 @@ function fold(){
     document.getElementById('player-image-2').src = "assets/images/empty.png"
     document.getElementById('player-image-3').src = "assets/images/empty.png"
     document.getElementById('player-image-4').src = "assets/images/empty.png"
+    console.log(value)
 
 }
 
@@ -49,11 +51,16 @@ function fold(){
  * Hold
  */
 function hold(){
-    let oldCount = parseInt(document.getElementById("count").innerText);
-    document.getElementById("count").innerText = ++oldCount;
+    let count = parseInt(document.getElementById("count").value);
+    document.getElementById("count").value = ++count;
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
-    console.log(dealerInt)
+    
+    
+    console.log(dealer1)
+    
+    console.log(count)
+
 
     if (dealer1==1){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
@@ -94,7 +101,7 @@ function hold(){
     else if(dealer1==13){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
-
+    
 }
 
 /**
@@ -102,16 +109,20 @@ function hold(){
  */
 
 function newDeal(){
-    let count = parseInt(document.getElementById("count").innerText);
-    document.getElementById("count").innerText = 0;
-    const rndInt = Math.floor(Math.random() * 13) + 1
-    let player1 = rndInt
-    console.log(rndInt)
+    document.getElementById("count").value = 1;
+    let count = parseInt(document.getElementById("count").value);
+    
+
+
+    
+    const playerInt = Math.floor(Math.random() * 13) + 1
+    let player1 = playerInt
+    console.log(playerInt)
 
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
     console.log(dealerInt)
-    
+    console.log(count)
     if (player1==1){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
     }
@@ -152,7 +163,7 @@ function newDeal(){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
 
-
+   
 
     if (dealer1==1){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
@@ -191,9 +202,9 @@ function newDeal(){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/q_clubs.png"
     }
     else if(dealer1==13){
-        document.getElementById(`dealer-image-${oldCount}`).src = "assets/images/clubs/k_clubs.png"
+        document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
-
+    
 }
 
 /**
@@ -201,8 +212,8 @@ function newDeal(){
  */
 function hitMe(){
     
-    let oldCount = parseInt(document.getElementById("count").innerText);
-    document.getElementById("count").innerText = ++oldCount;
+    let count = parseInt(document.getElementById("count").value);
+    document.getElementById("count").value = ++count;
     const playerInt = Math.floor(Math.random() * 13) + 1
     let player1 = playerInt
     console.log(playerInt)
@@ -210,7 +221,7 @@ function hitMe(){
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
     console.log(dealerInt)
-    
+    console.log(count)
     if (player1==1){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
     }
@@ -295,10 +306,3 @@ function hitMe(){
 }
 
 
-/**
- * Count Turn
- */
-function countTurn(){
-    let oldCount = parseInt(document.getElementById("count").innerText);
-    document.getElementById("count").innerText = ++oldCount;
-}
