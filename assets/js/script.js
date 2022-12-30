@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function fold(){
     document.getElementById("count").value = 0;
-    let value = document.getElementById("count").value;
+    let currentCount = document.getElementById("count").value;
     document.getElementById('dealer-image-1').src = "assets/images/empty.png"
     document.getElementById('dealer-image-2').src = "assets/images/empty.png"
     document.getElementById('dealer-image-3').src = "assets/images/empty.png"
@@ -42,7 +42,7 @@ function fold(){
     document.getElementById('player-image-2').src = "assets/images/empty.png"
     document.getElementById('player-image-3').src = "assets/images/empty.png"
     document.getElementById('player-image-4').src = "assets/images/empty.png"
-    console.log(value)
+    console.log(currentCount)
 
 }
 
@@ -60,6 +60,9 @@ function hold(){
     console.log(dealer1)
     
     console.log(count)
+
+    
+    document.getElementById(`dealer-value-${count}`).textContent  = dealer1;
 
 
     if (dealer1==1){
@@ -113,7 +116,7 @@ function newDeal(){
     let count = parseInt(document.getElementById("count").value);
     
 
-
+    
     
     const playerInt = Math.floor(Math.random() * 13) + 1
     let player1 = playerInt
@@ -123,6 +126,10 @@ function newDeal(){
     let dealer1 = dealerInt
     console.log(dealerInt)
     console.log(count)
+    
+    
+
+
     if (player1==1){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
     }
@@ -163,7 +170,8 @@ function newDeal(){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
 
-   
+    document.getElementById(`player-value-${count}`).textContent = player1;
+    document.getElementById(`dealer-value-${count}`).textContent  = dealer1;
 
     if (dealer1==1){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
@@ -222,6 +230,9 @@ function hitMe(){
     let dealer1 = dealerInt
     console.log(dealerInt)
     console.log(count)
+
+    document.getElementById(`player-value-${count}`).textContent  = player1;
+    document.getElementById(`dealer-value-${count}`).textContent  = dealer1;
     if (player1==1){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
     }

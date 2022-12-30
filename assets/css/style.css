@@ -8,7 +8,9 @@ body {
 #count{
     text-align: center;
 }
-
+#dealer-value-1{
+    text-align: center;
+}
 /* --------- Heading */
 .heading {
     text-align: center;
