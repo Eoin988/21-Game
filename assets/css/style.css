@@ -5,7 +5,9 @@ body {
     color: #b6f016;
     text-align: center;
 }
-
+#count{
+    text-align: center;
+}
 
 /* --------- Heading */
 .heading {
