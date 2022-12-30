@@ -6,6 +6,7 @@ body {
     text-align: center;
 }
 
+
 /* --------- Heading */
 .heading {
     text-align: center;
@@ -15,11 +16,65 @@ body {
 .table-area {
     background-color: #04522d;
     box-sizing: border-box;
-    width: 85%;
-    height: 80vh;
-    max-height: 1000px;
+    width: 95%;
+    height: 90%;
+    max-height: 1200px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+}
+
+.dealer-hand-area {
+    width: 85%;
+    
+    margin: auto;
+}
+
+
+.deck-area {
+    margin: auto;
+}
+
+.player-hand-area {
+    width: 85%;
+
+    margin: auto;
+}
+
+
+.btn {
+    width: 220px;
+    height: 60px;
+    letter-spacing: 1.2px;
+    border-radius: 60px;
+}
+
+
+
+
+
+
+@media (max-width: 425px) {
+    .dealer-hand-area  {
+        width: 100%;
+    }
+    .player-hand-area {
+        width: 100%;
+    }
+
+    .btn {
+        margin: 0 10px;
+        padding: 5px;
+        border: 5px solid;
+        width: 50px;
+        height: 50px;
+        font-size: .5rem;
+    }
+}
+/**
+@media (max-width: 320px) {
+    .dealer-hand-area {
+        height: 30vh;
+    }
 }
