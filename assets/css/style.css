@@ -13,6 +13,7 @@ body {
     font-size: 2.5rem;
 }
 
+/* --------- Main Game Area */
 .table-area {
     background-color: #04522d;
     box-sizing: border-box;
@@ -25,34 +26,77 @@ body {
     padding: 1%;
 }
 
+/* --------- Dealers Hand */
 .dealer-hand-area {
     width: 85%;
     
     margin: auto;
 }
 
-
+/* --------- Deck Of Cards Image */
+/* Container needed to position the button. Adjust the width as needed */
 .deck-area {
     margin: auto;
-}
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .deck-area img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
 
+  /* Style the button and place it in the middle of the container/image */
+.deck-area .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #04522d;
+    color: #b6f016;
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 220px;
+    height: 60px;
+    letter-spacing: 1.2px;
+    border: 5px solid;
+    border-radius: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .deck-area .btn:hover {
+    background-color: black;
+  }
+
+/* --------- Players Hand */
 .player-hand-area {
     width: 85%;
 
     margin: auto;
 }
 
-
+/* --------- Buttons */
 .btn {
     width: 220px;
     height: 60px;
     letter-spacing: 1.2px;
+    border: 5px solid;
     border-radius: 60px;
+    font-size: 1.5rem;
+    background-color: #04522d;
+    color: #b6f016;
+}
+
+.btn:hover{
+    background-color: black;
 }
 
 
 
-
+/* --------- Media queries */
 
 
 @media (max-width: 425px) {
@@ -67,9 +111,19 @@ body {
         margin: 0 10px;
         padding: 5px;
         border: 5px solid;
-        width: 50px;
+        border-radius: 60px;
+        width: 80px;
         height: 50px;
-        font-size: .5rem;
+        font-size: 1rem;
+    }
+    .deck-area .btn{
+        margin: 1px;
+        padding: 1px;
+        border: 5px solid;
+        border-radius: 60px;
+        width: 100px;
+        height: 50px;
+        font-size: 1rem;
     }
 }
 /**
