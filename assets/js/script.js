@@ -1,39 +1,99 @@
+var count = 0;
+
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function(){
-            if (this.getAttribute("data-type") === "new") {
-                newDeal();
-               
-            } else if (this.getAttribute("data-type") === "hold") {
-                hold();
-              
-            }
-            else if (this.getAttribute("data-type") === "hit") {
-                hitMe();
-             
-            }
-            else if (this.getAttribute("data-type") === "fold") {
+            let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+            document.getElementById('dealerTotal').textContent  = dealerTotal;
+
+            let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+            document.getElementById('playerTotal').textContent  = playerTotal;
+
+            if (parseInt(document.getElementById('dealerTotal').textContent)  >'21'){
                 fold();
-            }
+                alert("Dealer Broke 21. You Win!");
+                throw "Dealer Broke 21. You Win!";
+            } else if (parseInt(document.getElementById('playerTotal').textContent)  >'21'){
+                fold();
+                alert("You Broke 21. You Lose!");
+                throw "You Broke 21. You Lose!";
+            } else if (parseInt(document.getElementById('playerTotal').textContent)  =='21'){
+                fold();
+                alert("You Got  21. You Win!");
+                throw "You Got  21. You Win!";
+            } else if (parseInt(document.getElementById('dealerTotal').textContent)  =='21'){
+                fold();
+                alert("Dealer Got  21. You Lose!");
+                throw "Dealer Got  21. You Lose!";
+            } 
+             else{
+                 if (this.getAttribute("data-type") === "new"  ) {
+                    fold();
+                    newDeal();
+                     
+               
+                }  else if ((this.getAttribute("data-type") === "play") && (count !== 0)) {
+                    checkTotals();
+                    fold();
+                } else if ((this.getAttribute("data-type") === "hold") && (count !== 0)) {
+                    hold();
+                    
+                } else if ((this.getAttribute("data-type") === "hold") && (count == 0)) {
+                    alert("You Need To Start A New Deal");
+                    throw "You Need To Start A New Deal";
+                } else if ((this.getAttribute("data-type") === "hit") && (count !== 0)) {
+                    hitMe();
+                    
+                } else if ((this.getAttribute("data-type") === "hit") && (count == 0)) {
+                    alert("You Need To Start A New Deal");
+                    throw "You Need To Start A New Deal";
+                } 
+                else {
+                    fold();
+                }
+                }
         })
     }
-
 })
 
 
 
 
+/**
+ * Check Totals
+ */
+function checkTotals(){
+    
+    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+    document.getElementById('dealerTotal').textContent  = dealerTotal;
+    
+    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+    document.getElementById('playerTotal').textContent  = playerTotal;
 
+    if ((playerTotal > dealerTotal) && (playerTotal <= '21' ) && (playerTotal >= '15' )){
+        alert(`You Win! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+        throw (`You Win! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+    } else if ((playerTotal < dealerTotal) && (dealerTotal <= '21' )&& (dealerTotal >= '15' )){
+        alert(`You Lose! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+        throw (`You Lose! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+    }
+    else {
+        alert(`Your Call`);
+        throw `Your Call`;
+    }
+
+    
+}
 
 
 /**
  * Fold
  */
 function fold(){
-    document.getElementById("count").value = 0;
-    let currentCount = document.getElementById("count").value;
+    
+    count = 0
     document.getElementById('dealer-image-1').src = "assets/images/empty.png"
     document.getElementById('dealer-image-2').src = "assets/images/empty.png"
     document.getElementById('dealer-image-3').src = "assets/images/empty.png"
@@ -42,8 +102,17 @@ function fold(){
     document.getElementById('player-image-2').src = "assets/images/empty.png"
     document.getElementById('player-image-3').src = "assets/images/empty.png"
     document.getElementById('player-image-4').src = "assets/images/empty.png"
-    console.log(currentCount)
-
+    document.getElementById(`dealer-value-1`).textContent  = 0;
+    document.getElementById(`dealer-value-2`).textContent  = 0;
+    document.getElementById(`dealer-value-3`).textContent  = 0;
+    document.getElementById(`dealer-value-4`).textContent  = 0;
+    document.getElementById(`player-value-1`).textContent  = 0;
+    document.getElementById(`player-value-2`).textContent  = 0;
+    document.getElementById(`player-value-3`).textContent  = 0;
+    document.getElementById(`player-value-4`).textContent  = 0;
+    document.getElementById('dealerTotal').textContent  = 0;
+    document.getElementById('playerTotal').textContent  = 0;
+    
 }
 
 
@@ -51,8 +120,8 @@ function fold(){
  * Hold
  */
 function hold(){
-    let count = parseInt(document.getElementById("count").value);
-    document.getElementById("count").value = ++count;
+    
+    count = ++count;
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
     
@@ -104,7 +173,11 @@ function hold(){
     else if(dealer1==13){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
-    
+    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+            document.getElementById('dealerTotal').textContent  = dealerTotal;
+
+    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+    document.getElementById('playerTotal').textContent  = playerTotal;
 }
 
 /**
@@ -112,8 +185,8 @@ function hold(){
  */
 
 function newDeal(){
-    document.getElementById("count").value = 1;
-    let count = parseInt(document.getElementById("count").value);
+    count = 1;
+   
     
 
     
@@ -212,7 +285,11 @@ function newDeal(){
     else if(dealer1==13){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
+    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+    document.getElementById('dealerTotal').textContent  = dealerTotal;
     
+    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+    document.getElementById('playerTotal').textContent  = playerTotal;
 }
 
 /**
@@ -220,8 +297,8 @@ function newDeal(){
  */
 function hitMe(){
     
-    let count = parseInt(document.getElementById("count").value);
-    document.getElementById("count").value = ++count;
+    
+    count = ++count;
     const playerInt = Math.floor(Math.random() * 13) + 1
     let player1 = playerInt
     console.log(playerInt)
@@ -313,7 +390,11 @@ function hitMe(){
     else if(dealer1==13){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
+    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+            document.getElementById('dealerTotal').textContent  = dealerTotal;
 
+    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+    document.getElementById('playerTotal').textContent  = playerTotal;
 }
 
 
