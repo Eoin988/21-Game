@@ -304,12 +304,19 @@ function hitMe(){
     console.log(playerInt)
 
     const dealerInt = Math.floor(Math.random() * 13) + 1
-    let dealer1 = dealerInt
+    let dealer1 = dealerInt 
+    if (dealerInt >= '15') {
+         
+         document.getElementById(`dealer-value-${count}`).value = dealer1;
+    }
+    else{
+        document.getElementById(`dealer-value-${count}`).value  = '0';
+    }
     console.log(dealerInt)
     console.log(count)
 
     document.getElementById(`player-value-${count}`).textContent  = player1;
-    document.getElementById(`dealer-value-${count}`).textContent  = dealer1;
+    
     if (player1==1){
         document.getElementById(`player-image-${count}`).src = "assets/images/clubs/ace_clubs.png"
     }
