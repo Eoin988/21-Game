@@ -305,11 +305,16 @@ function hitMe(){
 
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt 
-    if (dealerInt >= '15') {
+    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
+            document.getElementById('dealerTotal').textContent  = dealerTotal;
+
+    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
+    document.getElementById('playerTotal').textContent  = playerTotal;
+    if (dealerTotal <= '15') {
          
          document.getElementById(`dealer-value-${count}`).value = dealer1;
     }
-    else{
+    else if (dealerTotal >= '15') {
         document.getElementById(`dealer-value-${count}`).value  = '0';
     }
     console.log(dealerInt)
@@ -397,11 +402,7 @@ function hitMe(){
     else if(dealer1==13){
         document.getElementById(`dealer-image-${count}`).src = "assets/images/clubs/k_clubs.png"
     }
-    let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
-            document.getElementById('dealerTotal').textContent  = dealerTotal;
-
-    let playerTotal = (parseInt(document.getElementById("player-value-1").innerText)+(parseInt(document.getElementById("player-value-2").innerText))+(parseInt(document.getElementById("player-value-3").innerText))+(parseInt(document.getElementById("player-value-4").innerText)));
-    document.getElementById('playerTotal').textContent  = playerTotal;
+    
 }
 
 
