@@ -8,9 +8,7 @@ body {
 #count{
     text-align: center;
 }
-#dealer-value-1{
-    text-align: center;
-}
+
 /* --------- Heading */
 .heading {
     text-align: center;
@@ -33,9 +31,10 @@ body {
 /* --------- Dealers Hand */
 .dealer-hand-area {
     width: 85%;
-    
+
     margin: auto;
 }
+
 
 /* --------- Deck Of Cards Image */
 /* Container needed to position the button. Adjust the width as needed */
@@ -48,8 +47,8 @@ body {
   /* Make the image responsive */
   .deck-area img {
     margin: auto;
-    width: 100%;
-    height: auto;
+    width: 50%;
+    height: 100%;
   }
 
   /* Style the button and place it in the middle of the container/image */
@@ -63,7 +62,7 @@ body {
     color: #b6f016;
     padding: 12px 24px;
     cursor: pointer;
-    width: 220px;
+    width: 180px;
     height: 60px;
     letter-spacing: 1.2px;
     border: 5px solid;
@@ -131,3 +130,30 @@ body {
     }
 }
 
+@media (max-width: 320px) {
+    .dealer-hand-area  {
+        width: 100%;
+    }
+    .player-hand-area {
+        width: 100%;
+    }
+
+    .btn {
+        margin: 0 10px;
+        padding: 5px;
+        border: 5px solid;
+        border-radius: 60px;
+        width: 80px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    .deck-area .btn{
+        margin: 1px;
+        padding: 1px;
+        border: 5px solid;
+        border-radius: 60px;
+        width: 100px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}

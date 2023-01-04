@@ -1,10 +1,4 @@
 var count = 0;
-/** 
-const hearts = ["assets/images/hearts/ace_hearts.png","assets/images/hearts/2_hearts.png","assets/images/hearts/3_hearts.png","assets/images/hearts/4_hearts.png","assets/images/hearts/5_hearts.png","assets/images/hearts/6_hearts.png","assets/images/hearts/7_hearts.png","assets/images/hearts/8_hearts.png","assets/images/hearts/9_hearts.png","assets/images/hearts/10_hearts.png","assets/images/hearts/j_hearts.png","assets/images/hearts/q_hearts.png","assets/images/hearts/k_hearts.png"]
-const clubs = ["assets/images/clubs/ace_clubs.png","assets/images/clubs/2_clubs.png","assets/images/clubs/3_clubs.png","assets/images/clubs/4_clubs.png","assets/images/clubs/5_clubs.png","assets/images/clubs/6_clubs.png","assets/images/clubs/7_clubs.png","assets/images/clubs/8_clubs.png","assets/images/clubs/9_clubs.png","assets/images/clubs/10_clubs.png","assets/images/clubs/j_clubs.png","assets/images/clubs/q_clubs.png","assets/images/clubs/k_clubs.png"]
-const diamonds = ["assets/images/diamonds/ace_diamonds.png","assets/images/diamonds/2_diamonds.png","assets/images/diamonds/3_diamonds.png","assets/images/diamonds/4_diamonds.png","assets/images/diamonds/5_diamonds.png","assets/images/diamonds/6_diamonds.png","assets/images/diamonds/7_diamonds.png","assets/images/diamonds/8_diamonds.png","assets/images/diamonds/9_diamonds.png","assets/images/diamonds/10_diamonds.png","assets/images/diamonds/j_diamonds.png","assets/images/diamonds/q_diamonds.png","assets/images/diamonds/k_diamonds.png"]
-const spades = ["assets/images/spades/ace_spades.png","assets/images/spades/2_spades.png","assets/images/spades/3_spades.png","assets/images/spades/4_spades.png","assets/images/spades/5_spades.png","assets/images/spades/6_spades.png","assets/images/spades/7_spades.png","assets/images/spades/8_spades.png","assets/images/spades/9_spades.png","assets/images/spades/10_spades.png","assets/images/spades/j_spades.png","assets/images/spades/q_spades.png","assets/images/spades/k_spades.png"]
-*/
 const used  = [];
 const decks = Array();
 let deckInt = Math.floor(Math.random() * 3)
