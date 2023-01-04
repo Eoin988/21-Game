@@ -1,4 +1,6 @@
 var count = 0;
+var dealerWin = 0;
+var playerWin = 0;
 const used  = [];
 const decks = Array();
 let deckInt = Math.floor(Math.random() * 3)
@@ -25,18 +27,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (parseInt(document.getElementById('dealerTotal').textContent)  >'21'){
                 fold();
+                incrementPlayerWins();
                 alert("Dealer Broke 21. You Win!");
                 throw "Dealer Broke 21. You Win!";
             } else if (parseInt(document.getElementById('playerTotal').textContent)  >'21'){
                 fold();
+                incrementDealerWins();
                 alert("You Broke 21. You Lose!");
                 throw "You Broke 21. You Lose!";
             } else if (parseInt(document.getElementById('playerTotal').textContent)  =='21'){
                 fold();
+                incrementPlayerWins();
                 alert("You Got  21. You Win!");
                 throw "You Got  21. You Win!";
             } else if (parseInt(document.getElementById('dealerTotal').textContent)  =='21'){
                 fold();
+                incrementDealerWins();
                 alert("Dealer Got  21. You Lose!");
                 throw "Dealer Got  21. You Lose!";
             } 
@@ -70,13 +76,37 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-
-
+/**
+ * count player pass
+ */
+function incrementPlayerWins(){
+    playerWin = ++playerWin
+    document.getElementById('playerWins').textContent  = playerWin;
+ 
+ }
+/**
+ * count player pass
+ */
+function incrementDealerWins(){
+    dealerWin = ++dealerWin
+    document.getElementById('dealerWins').textContent  = dealerWin;
+ 
+ }
 
 /**
  * Check Totals
  */
 function checkTotals(){
+    function playerWins(){
+        playerWin = ++playerWin
+    document.getElementById('playerWins').textContent  = playerWin;
+     
+     }
+    function dealerWins(){
+        dealerWin = ++dealerWin
+    document.getElementById('dealerWins').textContent  = dealerWin;
+     
+     }
     
     let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText)+(parseInt(document.getElementById("dealer-value-2").innerText))+(parseInt(document.getElementById("dealer-value-3").innerText))+(parseInt(document.getElementById("dealer-value-4").innerText)));
     document.getElementById('dealerTotal').textContent  = dealerTotal;
@@ -85,15 +115,18 @@ function checkTotals(){
     document.getElementById('playerTotal').textContent  = playerTotal;
 
     if ((playerTotal > dealerTotal) && (playerTotal <= '21' ) && (playerTotal >= '15' )){
+        playerWins();
         alert(`You Win! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
-        throw (`You Win! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+        
     } else if ((playerTotal < dealerTotal) && (dealerTotal <= '21' )&& (dealerTotal >= '15' )){
+        dealerWins();
         alert(`You Lose! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
-        throw (`You Lose! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
+        
+        
     }
     else {
         alert(`Your Call`);
-        throw `Your Call`;
+        
     }
 
     
