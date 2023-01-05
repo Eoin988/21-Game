@@ -5,9 +5,32 @@ body {
     color: #b6f016;
     text-align: center;
 }
-#count{
-    text-align: center;
+
+a:hover {
+    border-bottom: 1px solid black;
+    text-decoration: underline;
 }
+#rules {
+    color: #bfe45a;
+}
+li {
+    list-style-type:none;
+}
+a{
+    text-decoration: none; 
+    color: #b6f016;
+}
+h2 {
+    color: #354703;
+}
+.heading  a:hover {
+    border-bottom: 1px solid black;
+    text-decoration: underline;
+}
+.heading  a:active{
+    text-decoration: underline;
+}
+
 
 /* --------- Heading */
 .heading {
