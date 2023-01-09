@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>21 For Fun</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>21 For Fun</title>
+    </head>
 
-<body>
-    <header>
-        
-        <h1 class="heading">
-            <img src="assets/images/logo.png" alt="logo" height="25rem">
-            <a  href="rules.html">21 for Fun Rules</a>
-            
-        </h1>
-    </header>
-    <div class="table-area">
-        <p>Dealer Wins; <span id="dealerWins">0</span></p>
+    <body>
+        <header>
+
+            <h1 class="heading">
+                <img src="assets/images/logo.png" alt="logo" height="25">
+                <a href="rules.html">21 for Fun Rules</a>
+
+            </h1>
+        </header>
+        <div class="table-area">
+            <p>Dealer Wins; <span id="dealerWins">0</span></p>
 
 
-        <div class="dealer-hand-area">
+            <div class="dealer-hand-area">
 
-            <img id="dealer-image-1" src="assets/images/empty.png" alt="dealer card place holder">
+                <img id="dealer-image-1" src="assets/images/empty.png" alt="dealer card place holder">
 
-            <img id="dealer-image-2" src="assets/images/empty.png" alt="dealer card place holder">
+                <img id="dealer-image-2" src="assets/images/empty.png" alt="dealer card place holder">
 
-            <img id="dealer-image-3" src="assets/images/empty.png" alt="dealer card place holder">
+                <img id="dealer-image-3" src="assets/images/empty.png" alt="dealer card place holder">
 
-            <img id="dealer-image-4" src="assets/images/empty.png" alt="dealer card place holder">
+                <img id="dealer-image-4" src="assets/images/empty.png" alt="dealer card place holder">
 
-            <div>
-                <p>Card Values; <span id="dealer-value-1">0</span>
+                <div>
+                    <p>Card Values; <span id="dealer-value-1">0</span>
 
-                    <span id="dealer-value-2">0</span>
-                    <span id="dealer-value-3">0</span>
-                    <span id="dealer-value-4">0</span>
-                </p>
+                        <span id="dealer-value-2">0</span>
+                        <span id="dealer-value-3">0</span>
+                        <span id="dealer-value-4">0</span>
+                    </p>
+
+                </div>
 
             </div>
 
+
+            <p>Dealer Total; <span id="dealerTotal">0</span></p>
+
+            <div class="deck-area">
+
+                <img id="deck-image" src="assets/images/reverse.png" alt="game deck" height="100">
+                <button data-type="new" class="btn">New Deal</button>
+
+            </div>
+
+            <p>Your Total; <span id="playerTotal">0</span></p>
+
+            <p>Card Values;
+                <span id="player-value-1">0</span>
+                <span id="player-value-2">0</span>
+                <span id="player-value-3">0</span>
+                <span id="player-value-4">0</span>
+            </p>
+
+
+
+            <div class="player-hand-area">
+
+                <img id="player-image-1" src="assets/images/empty.png" alt="player card place holder">
+
+                <img id="player-image-2" src="assets/images/empty.png" alt="player card place holder">
+
+                <img id="player-image-3" src="assets/images/empty.png" alt="player card place holder">
+
+                <img id="player-image-4" src="assets/images/empty.png" alt="player card place holder">
+            </div>
+
+            <div>
+
+                <p>Player Wins; <span id="playerWins">0</span></p>
+
+            </div>
+        </div>
+
+        <div class="control-area">
+            <button data-type="hold" class="btn">Hold</button>
+            <button data-type="hit" class="btn">Hit Me!</button>
+            <button data-type="fold" class="btn">Fold</button>
+            <button data-type="play" class="btn">Play</button>
+
+
         </div>
 
 
-        <p>Dealer Total; <span id="dealerTotal">0</span></p>
-
-        <div class="deck-area">
-
-            <img id="dealer-image-1" src="assets/images/reverse.png" alt="game deck" height="250rem">
-            <button data-type="new" class="btn">New Deal</button>
-
-        </div>
-
-        <p>Your Total; <span id="playerTotal">0</span></p>
-
-        <p>Card Values;
-            <span id="player-value-1">0</span>
-            <span id="player-value-2">0</span>
-            <span id="player-value-3">0</span>
-            <span id="player-value-4">0</span>
-        </p>
-
-
-
-        <div class="player-hand-area">
-
-            <img id="player-image-1" src="assets/images/empty.png" alt="player card place holder">
-
-            <img id="player-image-2" src="assets/images/empty.png" alt="player card place holder">
-
-            <img id="player-image-3" src="assets/images/empty.png" alt="player card place holder">
-
-            <img id="player-image-4" src="assets/images/empty.png" alt="player card place holder">
-        </div>
-
-        <div>
-
-            <p>Player Wins; <span id="playerWins">0</span></p>
-
-        </div>
-    </div>
-
-    <div class="control-area">
-        <button data-type="hold" class="btn">Hold</button>
-        <button data-type="hit" class="btn">Hit Me!</button>
-        <button data-type="fold" class="btn">Fold</button>
-        <button data-type="play" class="btn">Play</button>
-
-
-    </div>
-
-
-    <script src="assets/js/script.js"></script>
-</body>
+        <script src="assets/js/script.js"></script>
+    </body>
 
 </html>

@@ -1,6 +1,6 @@
 /* --------- Global style */
 body {
-    background-color:  #678d7b;
+    background-color: #678d7b;
     font-family: "Raleway", sans-serif;
     color: #b6f016;
     text-align: center;
@@ -10,24 +10,30 @@ a:hover {
     border-bottom: 1px solid black;
     text-decoration: underline;
 }
+
 #rules {
     color: #bfe45a;
 }
+
 li {
-    list-style-type:none;
+    list-style-type: none;
 }
-a{
-    text-decoration: none; 
+
+a {
+    text-decoration: none;
     color: #b6f016;
 }
+
 h2 {
-    color: #354703;
+    color: #cef85b;
 }
-.heading  a:hover {
+
+.heading a:hover {
     border-bottom: 1px solid black;
     text-decoration: underline;
 }
-.heading  a:active{
+
+.heading a:active {
     text-decoration: underline;
 }
 
@@ -66,16 +72,16 @@ h2 {
     margin: auto;
     position: relative;
     width: 50%;
-  }
-  
-  /* Make the image responsive */
-  .deck-area img {
+}
+
+/* Make the image responsive */
+.deck-area img {
     margin: auto;
     width: 50%;
     height: 100%;
-  }
+}
 
-  /* Style the button and place it in the middle of the container/image */
+/* Style the button and place it in the middle of the container/image */
 .deck-area .btn {
     position: absolute;
     top: 50%;
@@ -92,11 +98,11 @@ h2 {
     border: 5px solid;
     border-radius: 60px;
     font-size: 1.5rem;
-  }
-  
-  .deck-area .btn:hover {
+}
+
+.deck-area .btn:hover {
     background-color: black;
-  }
+}
 
 /* --------- Players Hand */
 .player-hand-area {
@@ -117,7 +123,7 @@ h2 {
     color: #b6f016;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: black;
 }
 
@@ -127,9 +133,10 @@ h2 {
 
 
 @media (max-width: 425px) {
-    .dealer-hand-area  {
+    .dealer-hand-area {
         width: 100%;
     }
+
     .player-hand-area {
         width: 100%;
     }
@@ -143,7 +150,8 @@ h2 {
         height: 50px;
         font-size: 1rem;
     }
-    .deck-area .btn{
+
+    .deck-area .btn {
         margin: 1px;
         padding: 1px;
         border: 5px solid;
@@ -155,9 +163,10 @@ h2 {
 }
 
 @media (max-width: 320px) {
-    .dealer-hand-area  {
+    .dealer-hand-area {
         width: 100%;
     }
+
     .player-hand-area {
         width: 100%;
     }
@@ -171,7 +180,8 @@ h2 {
         height: 50px;
         font-size: 1rem;
     }
-    .deck-area .btn{
+
+    .deck-area .btn {
         margin: 1px;
         padding: 1px;
         border: 5px solid;
