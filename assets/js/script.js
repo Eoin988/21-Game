@@ -30,23 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
             let playerTotal = (parseInt(document.getElementById("player-value-1").innerText) + (parseInt(document.getElementById("player-value-2").innerText)) + (parseInt(document.getElementById("player-value-3").innerText)) + (parseInt(document.getElementById("player-value-4").innerText)));
             document.getElementById('playerTotal').textContent = playerTotal;
             /**
-             * Create checking for game ending score
+             * Create player wins message if dealertotal is greater than 21
              */
             if (parseInt(document.getElementById('dealerTotal').textContent) > '21') {
                 fold();
                 incrementPlayerWins();
                 alert("Dealer Broke 21. You Win!");
-
+                /**
+                 * Create dealer wins message if dealertotal is greater than 21
+                 */
             } else if (parseInt(document.getElementById('playerTotal').textContent) > '21') {
                 fold();
                 incrementDealerWins();
                 alert("You Broke 21. You Lose!");
-
+                /**
+                 * Create player wins message if playertotal is  equal to 21
+                 */
             } else if (parseInt(document.getElementById('playerTotal').textContent) == '21') {
                 fold();
                 incrementPlayerWins();
                 alert("You Got  21. You Win!");
-
+                /**
+                 * Create dealer wins message if dealertotal is equal to 21
+                 */
             } else if (parseInt(document.getElementById('dealerTotal').textContent) == '21') {
                 fold();
                 incrementDealerWins();
@@ -110,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 /**
- * count player pass
+ * count player win
  */
 function incrementPlayerWins() {
     playerWin = ++playerWin
@@ -118,7 +124,7 @@ function incrementPlayerWins() {
 
 }
 /**
- * count player pass
+ * count dealer win
  */
 function incrementDealerWins() {
     dealerWin = ++dealerWin
@@ -127,36 +133,53 @@ function incrementDealerWins() {
 }
 
 /**
- * Check Totals
+ * Play, Check Totals---------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 function checkTotals() {
+
+
+    /**
+     * increment number of player wins
+     */
     function playerWins() {
         playerWin = ++playerWin
         document.getElementById('playerWins').textContent = playerWin;
 
     }
-
+    /**
+     * increment number of dealer wins
+     */
     function dealerWins() {
         dealerWin = ++dealerWin
         document.getElementById('dealerWins').textContent = dealerWin;
 
     }
-
+    /**
+     * calculate dealer total
+     */
     let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText) + (parseInt(document.getElementById("dealer-value-2").innerText)) + (parseInt(document.getElementById("dealer-value-3").innerText)) + (parseInt(document.getElementById("dealer-value-4").innerText)));
     document.getElementById('dealerTotal').textContent = dealerTotal;
-
+    /**
+     * calculate dealer total
+     */
     let playerTotal = (parseInt(document.getElementById("player-value-1").innerText) + (parseInt(document.getElementById("player-value-2").innerText)) + (parseInt(document.getElementById("player-value-3").innerText)) + (parseInt(document.getElementById("player-value-4").innerText)));
     document.getElementById('playerTotal').textContent = playerTotal;
-
+    /**
+     * create player wins message and show scores
+     */
     if ((playerTotal > dealerTotal) && (playerTotal <= '21') && (playerTotal >= '15')) {
         playerWins();
         alert(`You Win! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
-
+        /**
+         * create dealer wins message and show scores
+         */
     } else if ((playerTotal < dealerTotal) && (dealerTotal <= '21') && (dealerTotal >= '15')) {
         dealerWins();
         alert(`You Lose! You Got ${playerTotal}, Dealer Got ${dealerTotal}`);
 
-
+        /**
+         * create your call message if no winner
+         */
     } else {
         alert(`Your Call`);
 
@@ -167,7 +190,7 @@ function checkTotals() {
 
 
 /**
- * Fold
+ * Fold, quit hand and forfeit score----------------------------------------------------------------------------------------------------------------------------------
  */
 function fold() {
 
@@ -195,7 +218,7 @@ function fold() {
 
 
 /**
- * Hold
+ * Hold, players skip a turn and dealer gets new card if dealertotal is less than 15--------------------------------------------------------------------------------------------
  */
 function hold() {
     /**
@@ -219,74 +242,82 @@ function hold() {
     const dealerInt = Math.floor(Math.random() * 13)
     let dealer1 = dealerInt
 
-
-
     /**
-     * Assign value to place holder
-     */
-    document.getElementById(`dealer-value-${count}`).textContent = dealer1;
-
-
-    /**
-     * Assign card image
-     */
-    switch (dealer1) {
-        case 1:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 2:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 3:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 4:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 5:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 6:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 7:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 8:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 9:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 10:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 11:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 12:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-        case 13:
-            document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
-            break;
-    }
-
-    /**
-     * Assign latest vale to dealers total score
+     * Assign latest value to dealers total score
      */
     let dealerTotal = (parseInt(document.getElementById("dealer-value-1").innerText) + (parseInt(document.getElementById("dealer-value-2").innerText)) + (parseInt(document.getElementById("dealer-value-3").innerText)) + (parseInt(document.getElementById("dealer-value-4").innerText)));
     document.getElementById('dealerTotal').textContent = dealerTotal;
 
     /**
-     * Assign latest vale to players total score
+     * Assign latest value to players total score
      */
     let playerTotal = (parseInt(document.getElementById("player-value-1").innerText) + (parseInt(document.getElementById("player-value-2").innerText)) + (parseInt(document.getElementById("player-value-3").innerText)) + (parseInt(document.getElementById("player-value-4").innerText)));
     document.getElementById('playerTotal').textContent = playerTotal;
+
+
+    if (dealerTotal <= '15') {
+        /**
+         * Assign value to next dealer card
+         */
+        document.getElementById(`dealer-value-${count}`).textContent = dealer1;
+
+
+        /**
+         * Assign card image
+         */
+        switch (dealer1) {
+            case 1:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 2:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 3:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 4:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 5:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 6:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 7:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 8:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 9:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 10:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 11:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 12:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+            case 13:
+                document.getElementById(`dealer-image-${count}`).src = "assets/images/reverse.png";
+                break;
+        }
+
+
+    } else {
+        /**
+         * Assign next dealer card value to zero
+         */
+        document.getElementById(`dealer-value-${count}`).textContent = '0';
+    }
 }
 
 /**
- * New Deal
+ * New Deal, starts a new game-------------------------------------------------------------------------------------------------------------------------------------
  */
 
 function newDeal() {
@@ -308,13 +339,13 @@ function newDeal() {
     }
 
     /**
-     * Create random number to select player card value
+     * Create random number to select next player card value
      */
     const playerInt = Math.floor(Math.random() * 13) + 1
     let player1 = playerInt
 
     /**
-     * Create random number to select dealer card value
+     * Create random number to select next dealer card value
      */
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
@@ -323,7 +354,7 @@ function newDeal() {
 
 
     /**
-     * Assign card image
+     * Assign card image to next player card
      */
     switch (player1) {
         case 1:
@@ -367,12 +398,12 @@ function newDeal() {
             break;
     }
     /**
-     * Assign card image*********************************************************
+     * Assign value to next player and dealer card value.
      */
     document.getElementById(`player-value-${count}`).textContent = player1;
     document.getElementById(`dealer-value-${count}`).textContent = dealer1;
     /**
-     * Assign card image
+     * Assign reverse card image to next dealer card
      */
     switch (dealer1) {
         case 1:
@@ -428,7 +459,7 @@ function newDeal() {
 }
 
 /**
- * Hit Me
+ * Hit Me, player and dealer get next card. Dealer only get new card if current dealertotal is less than 15---------------------------------------------------------------
  */
 
 /**
@@ -443,18 +474,18 @@ function hitMe() {
     }
 
     /**
-     * Increment the counter for card number requiring change.
+     * Increment the counter for next card position requiring change.
      */
     count = ++count;
 
     /**
-     * Create random number to select player card value
+     * Create random number to select next player card value
      */
     const playerInt = Math.floor(Math.random() * 13) + 1
     let player1 = playerInt
 
     /**
-     * Create random number to select dealer card value
+     * Create random number to select next dealer card value
      */
     const dealerInt = Math.floor(Math.random() * 13) + 1
     let dealer1 = dealerInt
@@ -480,7 +511,7 @@ function hitMe() {
         document.getElementById(`dealer-value-${count}`).textContent = dealer1;
 
         /**
-         * Assign card image
+         * Assign card image to next player card
          */
         switch (player1) {
             case 1:
@@ -525,7 +556,7 @@ function hitMe() {
         }
 
         /**
-         * Assign card image
+         * Assign reverse card image to next dealer card
          */
         switch (dealer1) {
             case 1:
@@ -569,10 +600,16 @@ function hitMe() {
                 break;
         }
     } else {
+        /**
+         * Assign next dealer value to zero
+         */
         document.getElementById(`dealer-value-${count}`).textContent = '0';
+        /**
+         * Assign next player value to number created
+         */
         document.getElementById(`player-value-${count}`).textContent = player1;
         /**
-         * Assign card image
+         * Assign card image to next player card
          */
         switch (player1) {
             case 1:
