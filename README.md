@@ -5,7 +5,7 @@ The player is able to view thier cards and values but not the computers. The pla
 
 
 
-![Responsice Mockup](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/responsive.png![Alt text](assets/media/mockup.PNG))
+![Responsice Mockup](https://github.com/Eoin988/21-Game/blob/main/assets/media/mockup.PNG)
 
 ## Features 
 
@@ -17,53 +17,67 @@ The player is able to view thier cards and values but not the computers. The pla
   - Featured at the top of the page, the full responsive icon links to the rules page. the rules page gives the user any rules needed to understand the game. 
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-![Nav Bar](https://github.com/Eoin988/21game/blob/main/assets/media/rules.PNG)
+![Nav Bar](https://github.com/Eoin988/21-Game/blob/main/assets/media/rules.PNG)
 
 - __Dealer Wins__
 
-  - THe amount of wins the dealer has acumilated is shown here.
+  - The amount of wins the dealer has acumilated is shown here.
   
 
-![Dealer Wins](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/main-info.PNG)
+![Dealer Wins](https://github.com/Eoin988/21-Game/blob/main/assets/media/dealer-wins.PNG)
 
-- __What We Do Section__
+- __Dealers Hand__
 
-  - The what we do section will allow the user to see what can be expected from joining wood sessions.
-  - This should encourage the user to consider starting a new hobby or working on their current hobby. 
+  - The dealers hand is shown here. The player can't see the dealers cards, but can see how many cards the dealer has.
   
 
-![What We Do](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/What-we-do.PNG)
+![Dealers Hand](https://github.com/Eoin988/21-Game/blob/main/assets/media/dealer-hand.PNG)
 
-- __Free solo section__
+- __Deck and New game area__
 
-  - This section will make the user aware they can voulunteer to help out in return for free solo sessions. 
+  - The deck is held here and the New Deal button is shown. 
+  - This is where every game or round must start. 
  
 
-![Free Solo](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/free.PNG)
+![Deck and New Deal](https://github.com/Eoin988/21-Game/blob/main/assets/media/deck.PNG)
 
-- __Sign Up Section__ 
+- __Your Total__ 
 
-  - The sign up section will allow the user to sign up or book a slot.
+  - The players total value of cards is shown. The player must get this value as close to 21 as possible.
 
 
-![Sign Up](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/sign-up.PNG)
+![Your Total](https://github.com/Eoin988/21-Game/blob/main/assets/media/player-total.PNG)
 
-- __Get In Touch__ 
+- __Your Values__ 
 
-  - The get in touch section includes all relevent info for contact and a link to the map location
+  - The players individual card values are shown here
  
 
-![Get in Touch](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/get-in-touch.PNG)
+![Your Values](https://github.com/Eoin988/21-Game/blob/main/assets/media/player-values.PNG)
 
-- __The Footer__ 
+- __Players Hand__ 
 
-  - The footer section includes links to the relevant social media sites for Wood Sessions. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media.
+  - The players hand is shown here. The player can see their own cards.
+
   
 
-![Footer](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/footer.PNG)
+![Players Hand](https://github.com/Eoin988/21-Game/blob/main/assets/media/player-hand.PNG)
 
+- __Player Wins__ 
 
+  - The amount of wins the dealer has acumilated is shown here.
+
+  
+
+![Player Wins](https://github.com/Eoin988/21-Game/blob/main/assets/media/player-wins.PNG)
+
+- __Game Controls__ 
+
+  - The player controls the game from here. They can choose to Hold, Hit Me!, Fold or Play.
+
+  
+
+![Game Controls](https://github.com/Eoin988/21-Game/blob/main/assets/media/controls.PNG)
 ### Existing Features Solo Page
 
 - __Solo Page Information__
