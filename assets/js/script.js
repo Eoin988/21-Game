@@ -36,22 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 fold();
                 incrementPlayerWins();
                 alert("Dealer Broke 21. You Win!");
-                throw "Dealer Broke 21. You Win!";
+
             } else if (parseInt(document.getElementById('playerTotal').textContent) > '21') {
                 fold();
                 incrementDealerWins();
                 alert("You Broke 21. You Lose!");
-                throw "You Broke 21. You Lose!";
+
             } else if (parseInt(document.getElementById('playerTotal').textContent) == '21') {
                 fold();
                 incrementPlayerWins();
                 alert("You Got  21. You Win!");
-                throw "You Got  21. You Win!";
+
             } else if (parseInt(document.getElementById('dealerTotal').textContent) == '21') {
                 fold();
                 incrementDealerWins();
                 alert("Dealer Got  21. You Lose!");
-                throw "Dealer Got  21. You Lose!";
+
             } else {
                 /**
                  * Create new game
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                  */
                 else if ((this.getAttribute("data-type") === "hold") && (count == 0)) {
                     alert("You Need To Start A New Deal");
-                    throw "You Need To Start A New Deal";
+
                 }
                 /**
                  * check
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                  */
                 else if ((this.getAttribute("data-type") === "hit") && (count == 0)) {
                     alert("You Need To Start A New Deal");
-                    throw "You Need To Start A New Deal";
+
                 }
                 /**
                  * Run fold function on any other condition
@@ -366,7 +366,9 @@ function newDeal() {
             document.getElementById(`player-image-${count}`).src = decks[`${deck}`][12];
             break;
     }
-
+    /**
+     * Assign card image*********************************************************
+     */
     document.getElementById(`player-value-${count}`).textContent = player1;
     document.getElementById(`dealer-value-${count}`).textContent = dealer1;
     /**
