@@ -1,108 +1,157 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# 21 Game
 
-Welcome Eoin988,
+21 Game is a fun  game where the user can play a simple version of 21's or Blackjack.
+The player is able to view thier cards and values but not the computers. The player needs to make the a decision on what for the best next move in order to get closest to 21.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+![Responsice Mockup](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/responsive.png![Alt text](assets/media/mockup.PNG))
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features 
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+### Existing Features Index Page
 
-Another blue button should appear to click: _Open Browser_.
+- __Header__
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  - Featured at the top of the page, the full responsive icon links to the rules page. the rules page gives the user any rules needed to understand the game. 
+  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-A blue button should appear to click: _Make Public_,
+![Nav Bar](https://github.com/Eoin988/21game/blob/main/assets/media/rules.PNG)
 
-Another blue button should appear to click: _Open Browser_.
+- __Dealer Wins__
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - THe amount of wins the dealer has acumilated is shown here.
+  
 
-To log into the Heroku toolbelt CLI:
+![Dealer Wins](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/main-info.PNG)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __What We Do Section__
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - The what we do section will allow the user to see what can be expected from joining wood sessions.
+  - This should encourage the user to consider starting a new hobby or working on their current hobby. 
+  
 
-------
+![What We Do](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/What-we-do.PNG)
 
-## Release History
+- __Free solo section__
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - This section will make the user aware they can voulunteer to help out in return for free solo sessions. 
+ 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Free Solo](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/free.PNG)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- __Sign Up Section__ 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  - The sign up section will allow the user to sign up or book a slot.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Sign Up](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/sign-up.PNG)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- __Get In Touch__ 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+  - The get in touch section includes all relevent info for contact and a link to the map location
+ 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Get in Touch](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/get-in-touch.PNG)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- __The Footer__ 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+  - The footer section includes links to the relevant social media sites for Wood Sessions. The links will open to a new tab to allow easy navigation for the user. 
+  - The footer is valuable to the user as it encourages them to keep connected via social media.
+  
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Footer](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/footer.PNG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Existing Features Solo Page
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- __Solo Page Information__
 
-------
+  - The solo page gives more information on solo sessions. 
+ 
 
-## FAQ about the uptime script
+![Gallery](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/solo-main-info.PNG)
 
-**Why have you added this script?**
+- __Solo Page Sign Up__
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+  - The solo page sign up will allow the user to only sign up for solo sessions.
+ 
 
-**How will this affect me?**
+![Gallery](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/solo-signup.PNG)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Existing Features Group Page
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- __Group Page Information__
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  - The group page gives more information on group sessions. 
+ 
 
-**So….?**
+![Gallery](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/group-main-info.PNG)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- __Group Page Sign Up__
 
-**Can I opt out?**
+  - The group page sign up will allow the user to only sign up for group sessions.
+ 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Gallery](https://github.com/Eoin988/wood-sessions/blob/main/assets/media/group-signup.PNG)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Features Left to Implement
 
-**Anything more?**
+- Add a schedule page or section so the user can see what time are partially booked or free, before looking to book a session.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Testing 
 
----
 
-Happy coding!
+Testing was carried out as each section was created or edited.
+A problem found was to add color to the header and footer. No fix for adding color to the header was found but partial footer color was added.
+Adding images in line with text proved problematic but the result is satisfactory.
+Once the site was deployed no images loaded. Many solutions had been tried before discovering the delay between pushing to git hub and the result having effect.
+Also once deployed the free and contact links on the solo and group pages no longer worked. 
+The alignment of items in the what we do section and the nav bar on the header proved problematic on smaller screens. Although the is still room for improvement in the nav bar alignment, the site is still functional on smaller screens.
+
+
+
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Feoin988.github.io%2Fwood-sessions%2F)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feoin988.github.io%2Fwood-sessions%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+### Unfixed Bugs
+
+  - Some sizing issues are still present although everything can be still viewed on all screeen sizes.
+
+## Deployment
+
+
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select Deploy from a branch.
+  - Select Main in the branch drop down
+  - Once the main branch has been selected, press save and allow the site to be deployed
+  - Once complete and address is shown for the website.
+
+The live link can be found here -  https://eoin988.github.io/wood-sessions/ 
+
+
+## Credits 
+
+In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+
+You can break the credits section up into Content and Media, depending on what you have included in your project. 
+
+### Content 
+
+-  The code used for the footer is moslty taken from the Love Running walkthrough project.
+- The code used to style the intro text on the index page was based on the information on [CSS-TRICKS](https://css-tricks.com/adding-stroke-to-web-text/)
+- Instructions on how to create a time and date input in the Sign Up sections was taken from [mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time)
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The Read me file structure was taken from the example Readme file. 
+
+### Media
+
+- The photos used on the site are from [Pexels](https://www.pexels.com/search/woodwork/)
