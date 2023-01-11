@@ -104,7 +104,7 @@ The player is able to view thier cards and values but not the computers. The pla
 - I maunally tested each function as it was created
 - Some control functions could not be used before a game was started, so a message was implemented for when this case occured. Each button that needed this message was tested manually.
 - Each function was fully tested individually first, then all together when all functions had been creeated and implemented.
- - I confirmed the colours and fonts chosen are easy to read by running it through lighthouse in devtools [W3C validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/lighthouse.PNG)
+ - I confirmed the colours and fonts chosen are easy to read by running it through lighthouse in devtools ![Lighthouse](https://github.com/Eoin988/21-Game/blob/main/assets/media/lighthouse.PNG)
 
 
 
@@ -112,11 +112,11 @@ The player is able to view thier cards and values but not the computers. The pla
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/index-validator.PNG) [W3C validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/rules-validator.PNG)
+  - No errors were returned when passing through the official ![W3C validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/index-validator.PNG) ![W3C validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/rules-validator.PNG)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
+  - No errors were found when passing through the official ![(Jigsaw) validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
 - js
-  - No errors were found, but 164 warnigs were found when passing through the official [(jshint](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
+  - No errors were found, but 164 warnigs were found when passing through the official ![jshint](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
 ### Unfixed Bugs
 
   - Some sizing issues are still present although everything can be still viewed on all screeen sizes.
