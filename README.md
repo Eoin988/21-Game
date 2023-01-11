@@ -116,7 +116,7 @@ The player is able to view thier cards and values but not the computers. The pla
 - CSS
   - No errors were found when passing through the official ![(Jigsaw) validator](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
 - js
-  - No errors were found, but 164 warnigs were found when passing through the official ![jshint](https://github.com/Eoin988/21-Game/blob/main/assets/media/css-validator.PNG)
+  - No errors were found, but 164 warnigs were found when passing through the official ![jshint](https://github.com/Eoin988/21-Game/blob/main/assets/media/js-validator.PNG)
 ### Unfixed Bugs
 
   - Some sizing issues are still present although everything can be still viewed on all screeen sizes.
