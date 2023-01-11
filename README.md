@@ -120,6 +120,7 @@ The player is able to view thier cards and values but not the computers. The pla
 ### Unfixed Bugs
 
   - Some sizing issues are still present although everything can be still viewed on all screeen sizes.
+  - All card assigning functions use a switch case. There is no default case, this is due to there being no need for a default case, as only one of the assigned cases can be called in each function.
 
 ## Deployment
 
